@@ -1,0 +1,42 @@
+
+.filtros{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-wrapper{
+    position: relative;
+    margin-left: 5%;
+}
+
+.input{
+    width: 200%;
+    padding: 10px 0px;
+    text-indent: 40px;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.bi{
+    color: #929292;
+	position: absolute;
+	left: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.select{
+    margin-right: 5%;
+    width: 15%;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 100;
+    /* text-indent: 10px; */
+    padding: 0px 17px;
+}
+
+option{
+    margin-top: 5px;
+}
