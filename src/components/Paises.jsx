@@ -20,9 +20,9 @@ const Paises = ({ data, filtro, filterSelect}) => {
                             <h2 className='nombre'>{item.name.common}</h2>
                         </div>
                         <div className="parrafos">
-                            <p>Population: <span>{item.population}</span></p>
-                            <p>Region: <span>{item.continents}</span></p>
-                            <p>Capital: <span>{item.capital}</span></p>
+                            <p className='items'>Population: <span>{item.population}</span></p>
+                            <p className='items'>Region: <span>{item.continents}</span></p>
+                            <p className='items'>Capital: <span>{item.capital}</span></p>
                         </div>
                     </div>
                 </div>

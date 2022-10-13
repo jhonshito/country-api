@@ -2,6 +2,7 @@
 .filtros{
     display: flex;
     justify-content: space-between;
+    margin-top: 12%;
 }
 
 .input-wrapper{
@@ -39,4 +40,22 @@
 
 option{
     margin-top: 5px;
+}
+
+/* dark model */
+
+.dark{
+    background-color: hsl(207, 26%, 17%);
+}
+
+.dark .input{
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+    border: 1px solid hsl(209, 23%, 22%);
+}
+
+.dark .select{
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+    border: 1px solid hsl(209, 23%, 22%);
 }

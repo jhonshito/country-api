@@ -4,4 +4,39 @@
     width: 100%;
     padding: 20px 0px;
     border-bottom: 5px solid white;
+    margin-bottom: 60px;
+    position: fixed;
+    top: 0px;
+    background-color: white;
+}
+
+.cabezera{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tituloCabezera{
+    margin-left: 70px;
+}
+
+.textoCabezera{
+    display: flex;
+    margin-right: 70px;
+}
+
+.textDark{
+    margin-top: 9px;
+    margin-left: 10px;
+}
+
+i{
+    font-size: 25px;
+}
+
+/* dark model */
+
+.dark .contenedorNavbar{
+    background-color: hsl(209, 23%, 22%);
+    border-bottom: 5px solid hsl(209, 23%, 22%);
+    color: white;
 }
