@@ -5,6 +5,9 @@ import '../styles/paises.css'
 const Paises = ({ data, filtro, filterSelect}) => {
 
     const paisesFilter = data.filter((e) => e.name.common.toLowerCase().includes(filtro.toLowerCase())) .filter((a) => a.continents[0].toLowerCase().includes(filterSelect.toLowerCase()))
+
+    // jhon este es para el desafio de mañana cuando lo veas lo entenderas
+    console.log(paisesFilter)
   return (
     <div className='contenedor'>
          {
