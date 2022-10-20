@@ -1,6 +1,6 @@
 
-import React from 'react'
-import '../styles/app.css'
+import React from 'react';
+import '../styles/app.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Paises from './Paises';
@@ -17,7 +17,7 @@ const App = () => {
         const res = await fetch('https://restcountries.com/v3.1/all');
         const datos = await res.json()
         setData(datos)
-        console.log(datos)
+        // console.log(datos)
     }
 
     const region = function(campoRegion){
