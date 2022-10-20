@@ -12,12 +12,20 @@ const DataPaises = () => {
     let {name} = useParams();
 
     const [data, setData] = useState([]);
+    const [objecto, setObjecto ] = useState([]);
+    const [curres, setCurres] = useState([]);
+
+    // console.log(curres[0].name)
     
     const fetchData = async function(){
       try {
         const res = await fetch(`https://restcountries.com/v3.1/name//${name}`);
         const datos = await res.json();
         setData(datos)
+        setObjecto(Object.values(datos[0].languages))
+        setCurres(Object.values(datos[0].currencies))
+        // console.log(Object.values(datos[0].currencies))
+        // console.log(datos[0].currencies)
       } catch (error) {
         console.log(error)
       }
@@ -39,11 +47,14 @@ const DataPaises = () => {
 
       <div className="contenido">
         <div className="imagenContenido">
-          <img className='imgContenido' src={!data[0] ? data : data[0].flags.png} alt="" />
+          <img className='imgContenido shadow' src={!data[0] ? data : data[0].flags.png} alt="" />
         </div>
         <div className="contenidoTextos">
           <div className="contenidoTextoUno">
-            <h2 className='title'>{!data[0] ? data : data[0].name.common}</h2>
+            <div className="titulosAndLogo">
+              <h2 className='title'>{!data[0] ? data : data[0].name.common}</h2>
+              <span className='logo'>{!data[0] ? data : data[0].flag}</span>
+            </div>
             <p>Native Name: <span>{!data[0] ? data : data[0].altSpellings[1]}</span></p>
             <p>Population: <span>{!data[0] ? data : data[0].population}</span></p>
             <p>Region: <span>{!data[0] ? data : data[0].region}</span></p>
@@ -52,15 +63,19 @@ const DataPaises = () => {
 
           <div className="contednidoDos">
             <p>Top Level Domain: <span>{!data[0] ? data : data[0].altSpellings[0]}</span></p>
-            <p>Currencies: <span>{!data[0] ? data : data[0].currencies.name}</span></p>
+            <p>Currencies: <span>{!data[0] ? data : curres[0].name}</span></p>
             <div className="lenguajes">
               <p>
-                :Lenguages: 
+                Lenguages: 
                 <span>
-                {!data[0] ? data : data[0].languages.nld},
-                {!data[0] ? data : data[0].languages.fra},
-                {!data[0] ? data : data[0].languages.deu}
-                </span></p>
+                {
+                  !data[0] ? data : objecto.map(item => (
+                    item
+                  ))
+                
+                },
+                </span>
+              </p>
             </div>
           </div>
         </div>

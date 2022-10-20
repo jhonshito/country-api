@@ -39,8 +39,40 @@
     width: 80%;
 }
 
+.titulosAndLogo{
+    display: flex;
+}
+
+.logo{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
 .contednidoDos{
     /* margin-left: 30%; */
     margin-top: 70px;
     /* width: 80%; */
+}
+
+
+.dark .back{
+    background-color: #2B3945;
+    color: white;
+    border: 1px solid #2B3945;
+}
+
+.dark .title{
+    color: white;
+}
+
+.dark .contenidoTextoUno{
+    color: white;
+}
+
+.dark span{
+    color: #757E85;
+}
+
+.dark .contednidoDos{
+    color: white;
 }
