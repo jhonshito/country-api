@@ -56,7 +56,7 @@ const DataPaises = () => {
               <span className='logo'>{!data[0] ? data : data[0].flag}</span>
             </div>
             <p>Native Name: <span>{!data[0] ? data : data[0].altSpellings[1]}</span></p>
-            <p>Population: <span>{!data[0] ? data : data[0].population}</span></p>
+            <p>Population: <span>{!data[0] ? data : data[0].population.toLocaleString('en-US')}</span></p>
             <p>Region: <span>{!data[0] ? data : data[0].region}</span></p>
             <p>Capital: <span>{!data[0] ? data : data[0].capital}</span></p>
           </div>
@@ -70,7 +70,7 @@ const DataPaises = () => {
                 <span>
                 {
                   !data[0] ? data : objecto.map(item => (
-                    item
+                    ` ${item}`
                   ))
                 
                 },
